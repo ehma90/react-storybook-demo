@@ -2,11 +2,19 @@ import React from "react";
 import Button from "./Button";
 
 export default {
-    title: "Button",
+    title: "Form/Button",
     component: Button
 }
 
-export const primary = () => <Button variant ="primary">Primary</Button>
-export const secondary = () => <Button variant ="secondary">Secondary</Button>
-export const success = () => <Button variant ="success">Success</Button>
-export const danger = () => <Button variant ="danger">Danger</Button>
+export const Primary = () => <Button variant ="primary">Primary</Button>
+export const Secondary = () => <Button variant ="secondary">Secondary</Button>
+export const Success = () => <Button variant ="success">Success</Button>
+export const Danger = () => <Button variant ="danger">Danger</Button>
+
+const Template = args => <Button {...args}/>
+
+export const PrimaryA = Template.bind({})
+PrimaryA.args = {
+    variant: 'primary',
+    children: 'A simple Primary button'
+}
